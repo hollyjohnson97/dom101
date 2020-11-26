@@ -97,20 +97,11 @@ function removeAll(selector) {
     const item = document.querySelectorAll(selector);
 
     for (const x of item) {
-        item.remove();
+        const parent = x.parentElement;
+        parent.removeChild(x);
     }
 }
 
-/*
-
-<ul id=x>
-  <li>one
-  <li>two
-  <li id=four>four
-<ul>
-
-<script>
-  const four = document.querySelector("#four");
-  four.remove();
-
- */
+function getUserData() {
+    
+}
