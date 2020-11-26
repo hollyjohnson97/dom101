@@ -106,15 +106,11 @@ function getUserData() {
     const username = document.querySelector("#username").value;
     const speed = document.querySelector("#speed").value;
     const student = document.querySelector("#student").checked;
-    let studentBoolean = false;
-    if (student === 'on') {
-        studentBoolean = true;
-    }
     const speedNumber = Number(speed);
-    const finalObject = {
+    return {
         name: username,
         speed: speedNumber,
         student: student,
     };
-    return finalObject;
+
 }
