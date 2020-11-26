@@ -87,9 +87,10 @@ function filler(list, candidates) {
 }
 
 function dupe(selector) {
-    const item = document.querySelectorAll(selector);
-    const copiedItem = item;
-    selector.appendChild(copiedItem);
+    const item = document.querySelector(selector);
+    const parent = item.parentElement;
+    const clone = item.cloneNode(true);
+    parent.appendChild(clone);
 }
 
 function removeAll(selector) {
