@@ -80,12 +80,15 @@ function mover(moveThis, appendToThis) {
 function filler(list, candidates) {
 console.log(candidates);
 //console.log(list);
-if (!candidates) return;
-    const items = document.querySelectorAll(`#${candidates}`);
+//if (!candidates) return;
+    //const items = document.querySelectorAll(`#${candidates}`);
    // const destination = document.querySelector(`#${list}`);
 
-    for (const x of items) {
-        destination.appendChild(x);
+    for (const x of candidates) {
+        const node = document.createElement("li");
+        const textnode = document.createTextNode(x);
+        node.appendChild(textnode);
+        list.appendChild(node);
     }
 
 
