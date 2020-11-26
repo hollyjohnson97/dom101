@@ -78,61 +78,13 @@ function mover(moveThis, appendToThis) {
 }
 
 function filler(list, candidates) {
-console.log(candidates);
-//console.log(list);
-//if (!candidates) return;
-    //const items = document.querySelectorAll(`#${candidates}`);
-   // const destination = document.querySelector(`#${list}`);
-
     for (const x of candidates) {
         const node = document.createElement("li");
         const textnode = document.createTextNode(x);
         node.appendChild(textnode);
         list.appendChild(node);
     }
-
-
-     /*
-
- const items = document.querySelectorAll(candidates);
-    const destination = document.querySelector(list);
-
-    for (const x of items) {
-        destination.appendChild(x);
-    }
-
-
-      */
-
-
-
-
-   /*
-   for (const x of candidates) {
-       list.appendChild(x);
-   }
-
-    */
 }
-
-/*
- const paras = document.querySelectorAll("p");
-  const dest1 = document.querySelector("#dest1");
-
-  for (const p of paras) {
-    dest1.appendChild(p);
-  }
-
-  // move one element to destination two
-  const dest2 = document.querySelector("#dest2");
-  const moveme = document.querySelector("#moveme");
-  dest2.appendChild(moveme);
-</script>
-
- */
-
-
-
 
 function dupe(selector) {
     const item = document.querySelectorAll(selector);
